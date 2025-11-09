@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+if (confirm("Should I calculate the square root?")) {
+  let num = Number(prompt("Enter a number:"));
+
+  if (num < 0) {
+    document.body.innerHTML = "The square root of a negative number is not defined.";
+  } else {
+    document.body.innerHTML = `Square root: ${Math.sqrt(num)}`;
+  }
+
+} else {
+  document.body.innerHTML = "The square root is not calculated.";
+}
+</script>
+</body>
+</html>

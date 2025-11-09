@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let dice = Number(prompt("How many dice?"));
+let targetSum = Number(prompt("What sum are you looking for?"));
+
+let simulations = 10000;
+let success = 0;
+
+for (let i = 0; i < simulations; i++) {
+  let sum = 0;
+  for (let d = 0; d < dice; d++) {
+    sum += Math.floor(Math.random() * 6) + 1;
+  }
+  if (sum === targetSum) success++;
+}
+
+let probability = (success / simulations * 100).toFixed(2);
+
+document.body.innerHTML = `
+Probability to get sum ${targetSum} with ${dice} dice is ${probability}%`;
+</script>
+</body>
+</html>

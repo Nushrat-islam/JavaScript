@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let year = Number(prompt("Enter a year:"));
+let isLeap = false;
+
+if (year % 4 === 0) {
+  if (year % 100 === 0 && year % 400 !== 0) {
+    isLeap = false;
+  } else {
+    isLeap = true;
+  }
+}
+
+if (isLeap) {
+  document.body.innerHTML = `${year} is a leap year.`;
+} else {
+  document.body.innerHTML = `${year} is not a leap year.`;
+}
+</script>
+</body>
+</html>
