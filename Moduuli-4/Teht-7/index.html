@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teht-7</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar" role="complementary" aria-label="Search panel">
+      <div class="brand">
+        <div class="logo">N</div>
+        <div>
+          <div class="title">Route Finder</div>
+          <div class="subtitle">Destination: <strong>Karaportti 2, Espoo</strong></div>
+          <div class="subtitle"><i>&copy; Nushrat Islam</i></div>
+        </div>
+      </div><br>
+
+      <form id="addressForm" aria-label="Find route form">
+        <label class="hint" for="address"><strong>Enter your address</strong></label>
+        <div class="field">
+          <input id="address" name="address" type="text" placeholder="E.g. Mannerheimintie 1, Helsinki" autocomplete="off" />
+        </div>
+
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <button type="submit" class="btn primary" title="Show route">Show route</button>
+          <button id="locBtn" type="button" class="btn ghost" title="Use my location">Use my location</button>
+        </div>
+      </form>
+
+      <div class="controls">
+        <div class="info" id="tripInfo">Enter an address or use your location.</div>
+      </div>
+      
+    </aside>
+
+    <main class="map-wrap" role="main" aria-label="Map">
+      <div id="map" aria-hidden="false"></div>
+      <div class="legend" id="legend" style="display:none">
+        <div class="line"></div>
+        <div class="muted">Route</div>
+      </div>
+    </main>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
